@@ -752,14 +752,16 @@ section,
 }
 
 .menu .menu-item .menu-img {
-  border-radius: 50%;
-  border: 4px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  
+  
   transition: 0.3s;
+  /* Added for consistent sizing and centering */
+  width: 350px;
+  height: 350px;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
-.menu .menu-item .menu-img:hover {
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
 
 .menu .menu-item h4 {
   font-size: 22px;
