@@ -785,6 +785,7 @@ section,
   padding: 8px 26px;
   border-radius: 50px;
 }
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -884,4 +885,16 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/* Custom styles for cart icon and badge */
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
 }

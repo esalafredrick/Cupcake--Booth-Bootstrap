@@ -47,7 +47,11 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="index.html#book-a-table">Cart</a>
+            <a href="cart.html" class="cart-icon-container">
+                <img src="assets/img/icons8-cart-96.png" alt="Shopping Cart Icon" height="30" width="30">
+                <span id="cart-badge" class="badge rounded-pill bg-danger cart-badge" style="display: none;">0</span>
+            </a>
+
 
         </div>
     </header>
@@ -115,88 +119,106 @@
 
             <div class="container section-title" data-aos="fade-up">
                 <h2>Our Menu</h2>
-                <p><span>Check Our</span> <span class="description-title">Yummy Menu</span></p>
+                <p><span>Check Our</span> <span class="description-title">Sweet Menu</span></p>
             </div>
 
             <div class="container">
                 <div class="row gy-5">
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="100" data-id="chocolate" data-name="Chocolate" data-price="350">
                         <img src="assets/img/menu item images/chocolate.png" class="menu-img img-fluid" alt="Chocolate Cupcake">
                         <h4>Chocolate</h4>
                         <p class="price">
                             Rs.350
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-chocolate" class="me-2">Amount</label><input type="number" id="units-chocolate" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
+
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="200" data-id="vanilla" data-name="Vanilla" data-price="350">
                         <img src="assets/img/menu item images/vanilla.png" class="menu-img img-fluid" alt="Vanilla Cupcake">
                         <h4>Vanilla</h4>
                         <p class="price">
                             Rs.350
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-vanilla" class="me-2">Amount</label><input type="number" id="units-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="300" data-id="strawberry" data-name="Strawberry" data-price="400">
                         <img src="assets/img/menu item images/strawberry.png" class="menu-img img-fluid" alt="Strawberry Cupcake">
                         <h4>Strawberry</h4>
                         <p class="price">
                             Rs.400
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-strawberry" class="me-2">Amount</label><input type="number" id="units-strawberry" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="100" data-id="coffee" data-name="Coffee" data-price="400">
                         <img src="assets/img/menu item images/coffee.png" class="menu-img img-fluid" alt="Coffee Cupcake">
                         <h4>Coffee</h4>
                         <p class="price">
                             Rs.400
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-coffee" class="me-2">Amount</label><input type="number" id="units-coffee" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="200" data-id="choc-vanilla-swirl" data-name="Choc-Vanilla Swirl" data-price="450">
                         <img src="assets/img/menu item images/Choc-Vanilla Swirl.png" class="menu-img img-fluid" alt="Choc-Vanilla Swirl Cupcake">
                         <h4>Choc-Vanilla Swirl</h4>
                         <p class="price">
                             Rs.450
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-choc-vanilla" class="me-2">Amount</label><input type="number" id="units-choc-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="300" data-id="vanilla-choc-swirl" data-name="Vanilla-Choc Swirl" data-price="400">
                         <img src="assets/img/menu item images/Vanilla-Choc Swirl.png" class="menu-img img-fluid" alt="Vanilla-Choc Swirl Cupcake">
                         <h4>Vanilla-Choc Swirl</h4>
                         <p class="price">
                             Rs.400
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-vanilla-choc" class="me-2">Amount</label><input type="number" id="units-vanilla-choc" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="100" data-id="peanut-butter" data-name="Peanut Butter" data-price="450">
                         <img src="assets/img/menu item images/peanut butter.png" class="menu-img img-fluid" alt="Peanut Butter Cupcake">
                         <h4>Peanut Butter</h4>
                         <p class="price">
                             Rs.450
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-peanut-butter" class="me-2">Amount</label><input type="number" id="units-peanut-butter" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="200" data-id="smarties-choc" data-name="Smarties Choc" data-price="450">
                         <img src="assets/img/menu item images/smarties choc.png" class="menu-img img-fluid" alt="Smarties Chocolate Cupcake">
                         <h4>Smarties Choc</h4>
                         <p class="price">
                             Rs.450
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-smarties-choc" class="me-2">Amount</label><input type="number" id="units-smarties-choc" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
-                    <div class="col-lg-4 menu-item">
+                    <div class="col-lg-4 menu-item" data-aos="zoom-in" data-aos-delay="300" data-id="smarties-vanilla" data-name="Smarties Vanilla" data-price="420">
                         <img src="assets/img/menu item images/smarties vanilla.png" class="menu-img img-fluid" alt="Smarties Vanilla Cupcake">
                         <h4>Smarties Vanilla</h4>
                         <p class="price">
                             Rs.420
                         </p>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-smarties-vanilla" class="me-2">Amount</label><input type="number" id="units-smarties-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+
                     </div>
 
                 </div>
-                <div class="text-center mt-5">
-                    <a href="#" class="btn-get-started">View Full Menu</a>
-                </div>
+                
             </div>
 
         </section>
@@ -348,6 +370,91 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Function to update the cart badge in the header
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalItems = 0;
+            cart.forEach(item => {
+                totalItems += item.quantity;
+            });
+            const cartBadge = document.getElementById('cart-badge');
+            if (cartBadge) {
+                cartBadge.textContent = totalItems;
+                cartBadge.style.display = totalItems > 0 ? 'inline-block' : 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default button behavior
+
+                    const menuItem = event.target.closest('.menu-item');
+                    const itemId = menuItem.dataset.id;
+                    const itemName = menuItem.dataset.name;
+                    const itemPrice = parseFloat(menuItem.dataset.price);
+                    const quantityInput = menuItem.querySelector('input[type="number"]');
+                    const quantity = parseInt(quantityInput.value, 10);
+                    
+                    if (quantity > 0) {
+                        // Animation logic
+                        const productImage = menuItem.querySelector('.menu-img');
+                        const clonedImage = productImage.cloneNode(true);
+                        clonedImage.classList.add('flying-product-image');
+
+                        const startRect = productImage.getBoundingClientRect();
+                        const cartButton = document.querySelector('.cart-icon-container');
+                        const endRect = cartButton.getBoundingClientRect();
+
+                        Object.assign(clonedImage.style, {
+                            position: 'fixed',
+                            top: `${startRect.top}px`,
+                            left: `${startRect.left}px`,
+                            width: `${startRect.width}px`,
+                            height: `${startRect.height}px`,
+                            zIndex: '9999',
+                            transition: 'all 0.8s ease-in-out',
+                            opacity: '1',
+                            borderRadius: '50%',
+                            objectFit: 'cover',
+                            pointerEvents: 'none'
+                        });
+
+                        document.body.appendChild(clonedImage);
+                        clonedImage.offsetWidth;
+
+                        // Update cart data
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        const existingItem = cart.find(item => item.id === itemId);
+
+                        existingItem ? existingItem.quantity += quantity : cart.push({ id: itemId, name: itemName, price: itemPrice, quantity: quantity });
+
+                        localStorage.setItem('cart', JSON.stringify(cart));
+
+                        Object.assign(clonedImage.style, {
+                            top: `${endRect.top + endRect.height / 2 - startRect.height / 8}px`,
+                            left: `${endRect.left + endRect.width / 2 - startRect.width / 8}px`,
+                            width: `${startRect.width / 4}px`,
+                            height: `${startRect.height / 4}px`,
+                            opacity: '0'
+                        });
+
+                        clonedImage.addEventListener('transitionend', () => {
+                            clonedImage.remove();
+                            updateCartBadge();
+                        }, { once: true });
+                    }
+                });
+            });
+
+            // Initial badge update on page load
+            updateCartBadge();
+        });
+    </script>
 
 </body>
 
