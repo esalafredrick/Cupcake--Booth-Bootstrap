@@ -793,6 +793,7 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
+  border-radius: 50px;
 }
 
 .contact .info-item .icon {
@@ -841,6 +842,7 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-top: 30px;
+  border-radius: 20px;
 }
 
 @media (max-width: 575px) {
@@ -897,4 +899,16 @@ section,
   position: absolute;
   top: -5px;
   right: -10px;
+}
+
+/* Sticky footer for cart page */
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cart-page .main {
+  flex-grow: 1;
+}
 }
