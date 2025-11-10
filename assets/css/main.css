@@ -899,6 +899,7 @@ section,
   position: absolute;
   top: -5px;
   right: -10px;
+  
 }
 
 /* Sticky footer for cart page */
@@ -910,5 +911,4 @@ section,
 
 .cart-page .main {
   flex-grow: 1;
-}
 }
