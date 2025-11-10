@@ -912,3 +912,42 @@ section,
 .cart-page .main {
   flex-grow: 1;
 }
+
+.dropdown-flavor{
+  display: inline-block;
+}
+
+.dropdown-flavor button {
+  background-color: pink;
+  color: #000000;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  width: 160px; /* Set a fixed width for alignment */
+}
+.dropdown-flavor a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+
+.dropdown-flavor a:hover {
+  background-color: #f30086ce;
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0a0a0a;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-flavor:hover .dropdown-content {
+  display: block;
+}
