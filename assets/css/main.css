@@ -40,7 +40,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f2f2f2;
+  --background-color: #ffffff;
   --surface-color: #ffffff;
 }
 
@@ -600,6 +600,31 @@ section,
   color: var(--accent-color);
 }
 
+/* Cupcake Builder Styles */
+.cupcake-builder {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10rem auto 0; /* Increased top margin to 10rem */
+}
+
+.cupcake-builder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#cupcake-topping {
+  width: 220px;   /* 300px - 80px */
+  height: 220px;  /* 300px - 80px */
+  top: 27%; /* Adjusted to move the topping up slightly */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain; /* Ensure the topping image fits without being cropped */
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -644,6 +669,10 @@ section,
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.events {
+  margin-bottom: 400px;
 }
 
 .hero .animated {
@@ -928,7 +957,7 @@ section,
 }
 .dropdown-flavor a {
   display: block;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   padding: 10px 15px;
   transition: background-color 0.3s;
@@ -943,11 +972,50 @@ section,
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #0a0a0a;
+  background-color: transparent;
+
   min-width: 160px;
   z-index: 1;
 }
 
+
+
 .dropdown-flavor:hover .dropdown-content {
   display: block;
+
+}
+
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+  background:none;
+}
+.carousel::-webkit-scrollbar{
+  display: none;
+}
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 15s infinite linear;
+  padding-right: 1em;
+}
+
+.card img {
+  flex: 0 0 100px;
+  padding: 0;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  display: flex; /* Use flexbox for centering content */
+  justify-content: center;
+  align-items: center;
+  /* Remove or comment out the line below to remove the border */
+  /* border: solid white 5px; */
+}
+
+@keyframes spin {
+ from {translate: 0;}
+ to {translate: -100%;}
 }
