@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1f9ef9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #f30086ce; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,7 +30,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #000000;  /* The default color of the main navmenu links */
-  --nav-hover-color: #2ed3fc; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #f30086ce; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #46d4ff; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -207,6 +207,24 @@ h6 {
   }
 }
 
+@media (max-width: 767px) {
+  .header .logo img {
+    display: none;
+  }
+
+  .header .container {
+    justify-content: space-between !important;
+  }
+
+  .header .logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+  }
+}
+
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
@@ -303,21 +321,22 @@ h6 {
 
   .navmenu {
     padding: 0;
-    z-index: 9997;
+    z-index: 99997;
   }
 
   .navmenu ul {
     display: none;
     list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
+    position: fixed;
+    top: 72px;
+    left: 20px;
+    right: 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
     background-color: var(--nav-mobile-background-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
-    overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
   }
@@ -375,31 +394,20 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: var(--nav-color);
     position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
+    font-size: 28px;
+    top: 20px;
+    right: 20px;
     margin-right: 0;
-    z-index: 9999;
+    z-index: 99999;
   }
 
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu ul {
     display: block;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
 .footer {
   --heading-font: var(--default-font);
   color: var(--default-color);
@@ -430,7 +438,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 38px;
   height: 40px;
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
@@ -554,7 +562,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 100px 0;
   scroll-margin-top: 92px;
   overflow: clip;
 }
@@ -565,6 +573,10 @@ section,
   .section {
     scroll-margin-top: 56px;
   }
+}
+
+section.events-menu-open {
+  overflow: visible;
 }
 
 /*--------------------------------------------------------------
@@ -663,6 +675,23 @@ section,
   }
 }
 
+@media (max-width: 767px) {
+  .cupcake-builder {
+    /* margin-top: -200px; */ /* Removed conflicting style */
+  }
+  #custom-cupcake-prompt {
+    margin-left: 0 !important;
+    white-space: normal !important;
+    font-size: 1.5rem;
+  }
+
+  #events .row.justify-content-center.align-items-center {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px !important; /* Increased margin-top */
+  }
+}
+
 /* Custom Selections List */
 #custom-selections-container {
   height: 300px; /* Match the cupcake builder height */
@@ -724,7 +753,6 @@ section,
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: white;
-  margin-right: 1rem;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 1px;
@@ -740,10 +768,6 @@ section,
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-.events {
-  margin-bottom: 400px;
 }
 
 .hero .animated {
@@ -853,13 +877,19 @@ section,
 
 .menu .menu-item .menu-img {
   
-  
   transition: 0.3s;
   /* Added for consistent sizing and centering */
   width: 350px;
   height: 350px;
   display: block;
   margin: 0 auto 15px auto;
+}
+
+@media (max-width: 767px) {
+  .menu .menu-item .menu-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
@@ -1015,7 +1045,9 @@ section,
 
 .dropdown-flavor{
   display: inline-block;
+  position: relative; /* Added for positioning context */
 }
+
 
 .dropdown-flavor button {
   background-color: pink;
@@ -1074,6 +1106,12 @@ section,
   animation: spin 15s infinite linear;
   padding-right: 1em;
 }
+@media (max-width: 767px) {
+  .carousel {
+    margin-top: 20px;
+  }
+}
+
 
 .card img {
   flex: 0 0 100px;
@@ -1090,3 +1128,54 @@ section,
  from {translate: 0;}
  to {translate: -100%;}
 }
+
+@media (max-width: 767px) {
+  .custom-dropdown-row .col-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .dropdown-flavor button {
+    width: 100%;
+    /* border: 2px solid #000; */
+  }
+
+  .custom-menu-content {
+    display: none;
+    position: absolute; /* Changed from fixed to absolute */
+    min-width: 160px;
+    top: 100%; /* Position below the button */
+    left: 0;
+    max-height: 80vh;
+    margin: 0;
+    border: 2px solid #000;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .custom-dropdown-row .col-3:last-child .custom-menu-content {
+    left: auto;
+    right: 0;
+  }
+
+  .custom-menu-active .custom-menu-content {
+    display: block;
+  }
+
+  .custom-menu-active .custom-menu-toggle {
+    z-index: 9999;
+    position: relative;
+  }
+
+  .dropdown-flavor a {
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 768px) {}

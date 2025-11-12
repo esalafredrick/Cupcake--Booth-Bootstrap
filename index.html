@@ -61,7 +61,7 @@
                     <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
                         <h1 data-aos="fade-up">Freshly Baked<br>Cupcakes</h1>
                         <p data-aos="fade-up" data-aos-delay="100">Sri lanka's 1<sup>st</sup> ever custom cupcake online designer.</p>
-                        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="200">
                             <a href="#events" class="btn-get-started">Design Your Cupcake</a>
                             <a href="#menu" class="btn-get-started">Explore Menu</a>
                         </div>
@@ -76,13 +76,13 @@
         
         <section id="about" class="about section">
 
-            <div class="container section-title" data-aos="fade-up">
+            <div class="container section-title" data-aos="fade-up" style="margin-top: 70px;">
                 <h2>About</h2>
                 <p><span>Learn More</span> <span class="description-title">About Us</span></p>
             </div>
         </section>
         
-        <section id="why-us" class="why-us section light-background">
+        <section id="why-us" class="why-us section light-background" >
 
             <div class="container">
 
@@ -111,6 +111,8 @@
     </div>
 
 </div>
+        
+
         <section id="menu" class="menu section">
 
             <div class="container section-title" data-aos="fade-up">
@@ -266,11 +268,11 @@
                  
                 
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-md-6 mb-3 text-center">
-                        <div class="dropdown-flavor">
-                            <button>Toppings</button>
-                            <div class="dropdown-content">
+                <div class="row justify-content-center custom-dropdown-row">
+                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                        <div class="dropdown-flavor" id="toppings-dropdown">
+                            <button class="custom-menu-toggle">Toppings</button>
+                            <div class="dropdown-content custom-menu-content">
                                 <a href="#" class="cupcake-option" data-layer="topping" data-src="assets/img/custom section /icing2.png">Chocolate</a>
                                 <a href="#" class="cupcake-option" data-layer="topping" data-src="assets/img/custom section /icing8.png">Vanilla</a>
                                 <a href="#" class="cupcake-option" data-layer="topping" data-src="assets/img/custom section /icing4.png">Strawberry</a>
@@ -282,20 +284,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-3 text-center">
-                        <div class="dropdown-flavor">
-                            <button>Fillings</button>
-                            <div class="dropdown-content" data-layer="filling">
+                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                        <div class="dropdown-flavor" id="fillings-dropdown">
+                            <button class="custom-menu-toggle">Fillings</button>
+                            <div class="dropdown-content custom-menu-content" data-layer="filling">
                                 <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/chocolate.png">Chocolate Syrup</a>
                                 <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/strawberry.png">Strawberry Jam</a>
                                 <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/peanut.png">Peanut Butter</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-3 text-center">
-                        <div class="dropdown-flavor">
-                            <button>Decorations</button>
-                            <div class="dropdown-content" data-layer="decoration">
+                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                        <div class="dropdown-flavor" id="decorations-dropdown">
+                            <button class="custom-menu-toggle">Decorations</button>
+                            <div class="dropdown-content custom-menu-content" data-layer="decoration">
                                 <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/strawberry.png">Strawberry</a>
                                 <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/orange.png">Orange Candy</a>
                                 <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/sprinkles.png">Sprinkles</a>
@@ -304,10 +306,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-3 text-center">
-                        <div class="dropdown-flavor">
-                            <button>Bases</button>
-                            <div class="dropdown-content" data-layer="base">
+                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                        <div class="dropdown-flavor" id="bases-dropdown">
+                            <button class="custom-menu-toggle">Bases</button>
+                            <div class="dropdown-content custom-menu-content" data-layer="base">
                                 <a href="#" class="cupcake-option" data-layer="base" data-src="assets/img/custom section /base1.png">Chocolate</a>
                                 <a href="#" class="cupcake-option" data-layer="base" data-src="assets/img/custom section /base3.png">Vanilla</a>
                                 <a href="#" class="cupcake-option" data-layer="base" data-src="assets/img/custom section /base4.png">Rainbow</a>
@@ -464,7 +466,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <h4>Follow Us</h4>
-                    <div class="social-links d-flex">
+                    <div class="social-links d-flex gap-2">
                         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
                         
