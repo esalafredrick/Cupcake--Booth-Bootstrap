@@ -317,16 +317,33 @@
                     </div>
                 </div>
 
-                <!-- Cupcake Display Area -->
-                <div id="cupcake-builder" class="cupcake-builder mb-5">
-                    <img id="cupcake-base" src="assets/img/bases/vanilla.png" alt="Cupcake Base">
-                    <img id="cupcake-topping" src="" alt="Cupcake Topping" style="display:none;">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6" style="margin-top: 250px;">
+                        <div id="cupcake-builder" class="cupcake-builder">
+                            <h2 id="custom-cupcake-prompt" class="text-center text-muted" style="margin-left:400px; white-space: nowrap;">Make your custom cupcake</h2>
+                            <img id="cupcake-base" src="" alt="Cupcake Base" style="display:none;">
+                            <img id="cupcake-topping" src="" alt="Cupcake Topping" style="display:none;">
+                            <img id="chocolate-syringe" src="assets/img/custom section /c syringe.png" alt="Chocolate Syringe" class="syringe">
+                            <img id="strawberry-syringe" src="assets/img/custom section /straw jam syringe.png" alt="Strawberry Jam Syringe" class="syringe">
+                        </div>
+                    </div>
+                    <div class="col-lg-4" style="margin-top: 320px;">
+                        <div id="custom-selections-container">
+                            <h4 id="your-creation-heading" style="display: none;">Custom Items:</h4>
+                            <ul id="custom-selections-list" class="list-group"></ul>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="text-center d-flex justify-content-center align-items-center mt-4">
+                    <button id="add-custom-cupcake-to-cart" class="btn btn-primary me-3">Finalize and Add to Cart</button>
+                    <h4 id="custom-cupcake-price" class="price mb-0">Rs.0</h4>
+                </div>
+
             </div>
 
 
             </section>      
-
 
                 
                 
@@ -563,28 +580,395 @@
             updateCartBadge();
         });
     </script>
-    <script>
+    <!-- This script is consolidated into the one below -->
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const options = document.querySelectorAll('.cupcake-option');
-            const baseImage = document.getElementById('cupcake-base');
-            const toppingImage = document.getElementById('cupcake-topping');
-            // Add more image elements if you have more layers like fillings, decorations
+            const addCustomButton = document.getElementById('add-custom-cupcake-to-cart');
+            const priceDisplay = document.getElementById('custom-cupcake-price');
+    
+            const prices = {
+                base: 200,
+                topping: 200,
+                filling: 100,
+                decoration: 100
+            };
 
-            options.forEach(option => {
+
+            const selectedOptions = {
+                base: { name: 'Vanilla', price: prices.base }, // Default base
+                topping: null,
+                filling: null,
+                decoration: null
+            };
+             const imageElements = {
+                base: document.getElementById('cupcake-base'),
+                topping: document.getElementById('cupcake-topping'),
+                filling: null,
+                decoration: null
+            };
+
+            function calculateTotalPrice() {
+                let total = 0;
+                if (selectedOptions.base) total += selectedOptions.base.price;
+                if (selectedOptions.topping) total += selectedOptions.topping.price;
+                if (selectedOptions.filling) total += selectedOptions.filling.price;
+                if (selectedOptions.decoration) total += selectedOptions.decoration.price;
+                return total;
+            }
+
+            function updatePriceDisplay() {
+                const totalPrice = calculateTotalPrice();
+                priceDisplay.textContent = `Rs.${totalPrice}`;
+            } 
+
+            // Combined event listener for all cupcake options
+            document.querySelectorAll('.cupcake-option').forEach(option => {
                 option.addEventListener('click', function(e) {
                     e.preventDefault();
                     const layer = this.dataset.layer;
+                    const name = this.textContent;
                     const src = this.dataset.src;
-
+    
+                    // --- Visual Update Logic ---
                     if (layer === 'base') {
-                        baseImage.src = src;
+                        imageElements.base.src = src;
                     } else if (layer === 'topping') {
-                        toppingImage.src = src;
-                        toppingImage.style.display = 'block';
+                        imageElements.topping.src = src;
+                        imageElements.topping.style.display = 'block';
+                    } else if (layer === 'filling') {
+                        let syringe;
+                        const fillingName = name.toLowerCase();
+                        if (fillingName.includes('chocolate')) {
+                            syringe = document.getElementById('chocolate-syringe');
+                        } else if (fillingName.includes('strawberry')) {
+                            syringe = document.getElementById('strawberry-syringe');
+                        }
+
+                        if (syringe) {
+                            // Hide other syringes if any are visible/animating
+                            document.querySelectorAll('.syringe').forEach(s => s.style.animation = 'none');
+                            syringe.offsetHeight; // Trigger reflow
+                            syringe.style.animation = 'inject-animation 2s ease-in-out';
+                        }
                     }
-                    // Add more conditions for other layers
+    
+                    // --- Pricing and State Update Logic ---
+                    const price = prices[layer] || 0;
+                    selectedOptions[layer] = { name, price };
+                    updatePriceDisplay();
                 });
             });
+    
+
+            addCustomButton.addEventListener('click', () => {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let cupcakeName = "Custom Cupcake";
+                let cupcakePrice = calculateTotalPrice();
+                const nameParts = [];
+
+                if (selectedOptions.base) {
+                    nameParts.push(selectedOptions.base.name + " base");
+                }
+                if (selectedOptions.topping) {
+                    nameParts.push(selectedOptions.topping.name + " topping");
+                }
+                if (selectedOptions.filling) {
+                    nameParts.push(selectedOptions.filling.name + " filling");
+                }
+                if (selectedOptions.decoration) {
+                    nameParts.push(selectedOptions.decoration.name + " decoration");
+                }
+                // You can add similar blocks for filling and decoration
+
+                if (nameParts.length > 0) {
+                    cupcakeName += ` (${nameParts.join(', ')})`;
+                }
+
+                const customCupcake = { id: `custom-${Date.now()}`, name: cupcakeName, price: cupcakePrice, quantity: 1 };
+                cart.push(customCupcake);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // --- Animation Logic ---
+                const cupcakeBuilder = document.getElementById('cupcake-builder');
+                const clonedBuilder = cupcakeBuilder.cloneNode(true);
+                clonedBuilder.id = ''; // Remove ID to avoid duplicates
+                clonedBuilder.classList.add('flying-product-image');
+
+                const startRect = cupcakeBuilder.getBoundingClientRect();
+                const cartButton = document.querySelector('.cart-icon-container');
+                const endRect = cartButton.getBoundingClientRect();
+
+                Object.assign(clonedBuilder.style, {
+                    position: 'fixed',
+                    top: `${startRect.top}px`,
+                    left: `${startRect.left}px`,
+                    width: `${startRect.width}px`,
+                    height: `${startRect.height}px`,
+                    zIndex: '9999',
+                    transition: 'all 0.8s ease-in-out',
+                    opacity: '1',
+                    borderRadius: '50%',
+                    pointerEvents: 'none',
+                    transform: 'scale(1)' // ensure it starts at normal size
+                });
+
+                document.body.appendChild(clonedBuilder);
+                clonedBuilder.offsetWidth; // Trigger reflow
+
+                Object.assign(clonedBuilder.style, {
+                    top: `${endRect.top + endRect.height / 2 - startRect.height / 8}px`,
+                    left: `${endRect.left + endRect.width / 2 - startRect.width / 8}px`,
+                    width: `${startRect.width / 4}px`,
+                    height: `${startRect.height / 4}px`,
+                    opacity: '0',
+                    transform: 'scale(0.2)'
+                });
+
+                clonedBuilder.addEventListener('transitionend', () => {
+                    clonedBuilder.remove();
+                    updateCartBadge();
+                }, { once: true });
+            });
+
+            // Initial price update
+            updatePriceDisplay();
+        }); 
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addCustomButton = document.getElementById('add-custom-cupcake-to-cart');
+            const priceDisplay = document.getElementById('custom-cupcake-price');
+            const selectionsList = document.getElementById('custom-selections-list');
+            const creationHeading = document.getElementById('your-creation-heading');
+            const cupcakePrompt = document.getElementById('custom-cupcake-prompt');
+
+            const prices = {
+                base: 200,
+                topping: 200,
+                filling: 100,
+                decoration: 100
+            };
+
+            const defaultBase = { name: 'Vanilla', price: prices.base, src: 'assets/img/bases/vanilla.png' };
+
+            // Load state from localStorage or start fresh
+            let selectedOptions = JSON.parse(localStorage.getItem('customCupcakeState')) || {
+                base: null,
+                topping: null,
+                filling: null,
+                decoration: null
+            };
+
+
+            const imageElements = {
+                base: document.getElementById('cupcake-base'),
+                topping: document.getElementById('cupcake-topping'),
+            };
+
+            function calculateTotalPrice() {
+                let total = 0;
+                Object.values(selectedOptions).forEach(option => {
+                    if (option) total += option.price;
+                });
+                return total;
+            }
+
+            function updatePriceDisplay() {
+                const totalPrice = calculateTotalPrice();
+                priceDisplay.textContent = `Rs.${totalPrice}`;
+            }
+
+            function updateSelectionsList() {
+                selectionsList.innerHTML = '';
+                Object.entries(selectedOptions).forEach(([layer, option]) => {
+                    if (option) {
+                        const li = document.createElement('li');
+                        li.className = 'list-group-item';
+                        li.innerHTML = `
+                            <span>${option.name} (${layer})</span>
+                            <button class="remove-selection-btn" data-layer="${layer}">✖</button>
+                        `;
+                        selectionsList.appendChild(li);
+                    }
+                });
+            }
+
+            function handleRemoveSelection(event) {
+                const layerToRemove = event.target.dataset.layer;
+
+                if (layerToRemove === 'base') { // Handle removing the base
+                    selectedOptions.base = null;
+                    imageElements.base.style.display = 'none';
+                    imageElements.base.src = '';
+                } else {
+                    selectedOptions[layerToRemove] = null;
+
+                    // Update visuals
+                    if (layerToRemove === 'topping') {
+                        imageElements.topping.style.display = 'none';
+                        imageElements.topping.src = '';
+                    }
+                    // Add logic for other removable layers (e.g., decorations)
+                }
+
+                // Update UI
+                updatePriceDisplay();
+                updateSelectionsList();
+
+                // Save state to localStorage
+                localStorage.setItem('customCupcakeState', JSON.stringify(selectedOptions));
+
+                // Check if all options are removed to reset the view
+                const allOptionsRemoved = Object.values(selectedOptions).every(option => option === null);
+                if (allOptionsRemoved) {
+                    creationHeading.style.display = 'none';
+                    cupcakePrompt.style.display = 'block';
+                }
+            }
+
+            // Event delegation for remove buttons
+            selectionsList.addEventListener('click', (event) => {
+                if (event.target.classList.contains('remove-selection-btn')) {
+                    handleRemoveSelection(event);
+                }
+            });
+
+            // Function to initialize the UI based on the current state
+            function initializeUI() {
+                const allOptionsRemoved = Object.values(selectedOptions).every(option => option === null);
+                if (allOptionsRemoved) {
+                    creationHeading.style.display = 'none';
+                    cupcakePrompt.style.display = 'block';
+                } else {
+                    creationHeading.style.display = 'block';
+                    cupcakePrompt.style.display = 'none';
+                    if (selectedOptions.base) {
+                        imageElements.base.src = selectedOptions.base.src;
+                        imageElements.base.style.display = 'block';
+                    }
+                    if (selectedOptions.topping) {
+                        imageElements.topping.src = selectedOptions.topping.src;
+                        imageElements.topping.style.display = 'block';
+                    }
+                }
+                updatePriceDisplay();
+                updateSelectionsList();
+            }
+
+            initializeUI(); // Set up the UI on page load
+            // Combined event listener for all cupcake options
+            document.querySelectorAll('.cupcake-option').forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const layer = this.dataset.layer;
+                    const name = this.textContent;
+                    const src = this.dataset.src;
+
+                    // Show the "Your Creation" heading
+                    creationHeading.style.display = 'block';
+
+                    // Hide the initial prompt message
+                    cupcakePrompt.style.display = 'none';
+
+                    // --- Pricing and State Update Logic ---
+                    const price = prices[layer] || 0;
+                    selectedOptions[layer] = { name, price, src };
+                    updatePriceDisplay();
+                    updateSelectionsList();
+
+                    // Save state to localStorage
+                    localStorage.setItem('customCupcakeState', JSON.stringify(selectedOptions));
+
+                    // --- Visual Update Logic ---
+                    if (layer === 'base') {
+                        imageElements.base.src = src;
+                        imageElements.base.style.display = 'block';
+                    } else if (layer === 'topping') {
+                        imageElements.topping.src = src;
+                        imageElements.topping.style.display = 'block';
+                    } else if (layer === 'filling') {
+                        let syringe;
+                        const fillingName = name.toLowerCase();
+                        if (fillingName.includes('chocolate')) {
+                            syringe = document.getElementById('chocolate-syringe');
+                        } else if (fillingName.includes('strawberry')) {
+                            syringe = document.getElementById('strawberry-syringe');
+                        }
+
+                        if (syringe) {
+                            document.querySelectorAll('.syringe').forEach(s => s.style.animation = 'none');
+                            syringe.offsetHeight; // Trigger reflow
+                            syringe.style.animation = 'inject-animation 2s ease-in-out';
+                        }
+                    }
+                });
+            });
+
+            addCustomButton.addEventListener('click', () => {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let cupcakeName = "Custom Cupcake";
+                let cupcakePrice = calculateTotalPrice();
+                const nameParts = [];
+
+                Object.entries(selectedOptions).forEach(([layer, option]) => {
+                    if (option) {
+                        nameParts.push(`${option.name} ${layer}`);
+                    }
+                });
+
+                if (nameParts.length > 0) {
+                    cupcakeName += ` (${nameParts.join(', ')})`;
+                }
+
+                const customCupcake = { id: `custom-${Date.now()}`, name: cupcakeName, price: cupcakePrice, quantity: 1 };
+                cart.push(customCupcake);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // --- Animation Logic ---
+                const cupcakeBuilder = document.getElementById('cupcake-builder');
+                const clonedBuilder = cupcakeBuilder.cloneNode(true);
+                clonedBuilder.id = '';
+                // Remove syringe elements from the clone so they don't fly to the cart
+                clonedBuilder.querySelectorAll('.syringe').forEach(s => s.remove());
+
+                clonedBuilder.classList.add('flying-product-image');
+
+                const startRect = cupcakeBuilder.getBoundingClientRect();
+                const cartButton = document.querySelector('.cart-icon-container');
+                const endRect = cartButton.getBoundingClientRect();
+
+                Object.assign(clonedBuilder.style, {
+                    position: 'fixed',
+                    top: `${startRect.top}px`,
+                    left: `${startRect.left}px`,
+                    width: `${startRect.width}px`,
+                    height: `${startRect.height}px`,
+                    zIndex: '9999',
+                    transition: 'all 0.8s ease-in-out',
+                    opacity: '1',
+                    borderRadius: '50%',
+                    pointerEvents: 'none',
+                    transform: 'scale(1)'
+                });
+
+                document.body.appendChild(clonedBuilder);
+                clonedBuilder.offsetWidth;
+
+                Object.assign(clonedBuilder.style, {
+                    top: `${endRect.top + endRect.height / 2 - startRect.height / 8}px`,
+                    left: `${endRect.left + endRect.width / 2 - startRect.width / 8}px`,
+                    width: `${startRect.width / 4}px`,
+                    height: `${startRect.height / 4}px`,
+                    opacity: '0',
+                    transform: 'scale(0.2)'
+                });
+
+                clonedBuilder.addEventListener('transitionend', () => {
+                    clonedBuilder.remove();
+                    updateCartBadge();
+                }, { once: true });
+            });
+
         });
     </script>
 
