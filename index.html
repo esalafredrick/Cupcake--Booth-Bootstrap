@@ -269,7 +269,7 @@
                 
 
                 <div class="row justify-content-center custom-dropdown-row">
-                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="toppings-dropdown">
                             <button class="custom-menu-toggle">Toppings</button>
                             <div class="dropdown-content custom-menu-content">
@@ -284,7 +284,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="fillings-dropdown">
                             <button class="custom-menu-toggle">Fillings</button>
                             <div class="dropdown-content custom-menu-content" data-layer="filling">
@@ -294,19 +294,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="decorations-dropdown">
                             <button class="custom-menu-toggle">Decorations</button>
                             <div class="dropdown-content custom-menu-content" data-layer="decoration">
-                                <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/strawberry.png">Strawberry</a>
-                                <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/orange.png">Orange Candy</a>
-                                <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/sprinkles.png">Sprinkles</a>
-                                <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/choc_sprinkles.png">Choc Sprinkles</a>
-                                <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/decorations/white_choc_sprinkles.png">White Choc Sprinkles</a>
+                                <a href="#" class="cupcake-option" data-layer="decoration" data-name="Strawberry" data-src="assets/img/decorations/strawberry.png" data-special="strawberry-combo">Strawberry</a>
+                                <!-- <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/custom section /stawberryfull.png">Strawberry Full</a>
+                                <a href="#" class="cupcake-option" data-layer="decoration" data-src="assets/img/custom section /stawbery half.png">Strawberry Half</a> -->
+                                <a href="#" class="cupcake-option" data-layer="decoration" data-name="Orange Candy" data-src="assets/img/custom section /orange slise.png" data-special="orange-combo">Orange Candy</a>
+                                <a href="#" class="cupcake-option" data-layer="decoration" data-name="Sprinkles" data-src="assets/img/custom section /all-sprinkle-rainbow.png" data-special="sprinkles-combo">Sprinkles</a>
+                                <a href="#" class="cupcake-option" data-layer="decoration" data-name="Choc Sprinkles" data-src="assets/img/custom section /all-choc-sprinkle.png" data-special="sprinkles-combo">Choc Sprinkles</a>
+                                <a href="#" class="cupcake-option" data-layer="decoration" data-name="White Choc Sprinkles" data-src="assets/img/custom section /all-white-sprinkle.png" data-special="sprinkles-combo">White Choc Sprinkles</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-3 mb-3 text-center">
+                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="bases-dropdown">
                             <button class="custom-menu-toggle">Bases</button>
                             <div class="dropdown-content custom-menu-content" data-layer="base">
@@ -320,16 +322,24 @@
                 </div>
 
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-6" style="margin-top: 250px;">
+                    <div class="col-lg-6 cupcake-builder-col" style="margin-top: 50px;">
                         <div id="cupcake-builder" class="cupcake-builder">
                             <h2 id="custom-cupcake-prompt" class="text-center text-muted" style="margin-left:400px; white-space: nowrap;">Make your custom cupcake</h2>
                             <img id="cupcake-base" src="" alt="Cupcake Base" style="display:none;">
                             <img id="cupcake-topping" src="" alt="Cupcake Topping" style="display:none;">
+                            <img id="strawberry-half-1" src="" alt="Strawberry Half 1" style="display:none;">
+                            <img id="strawberry-half-2" src="" alt="Strawberry Half 2" style="display:none;">
+                            <img id="orange-slice-1" src="" alt="Orange Slice 1" style="display:none;">
+                            <img id="orange-slice-2" src="" alt="Orange Slice 2" style="display:none;">
+                            <img id="orange-slice-3" src="" alt="Orange Slice 3" style="display:none;">
+                            <img id="orange-slice-4" src="" alt="Orange Slice 4" style="display:none;">
+                            <img id="cupcake-sprinkles" src="" alt="Sprinkles" style="display:none;">
                             <img id="chocolate-syringe" src="assets/img/custom section /c syringe.png" alt="Chocolate Syringe" class="syringe">
                             <img id="strawberry-syringe" src="assets/img/custom section /straw jam syringe.png" alt="Strawberry Jam Syringe" class="syringe">
+                            <img id="peanut-butter-syringe" src="assets/img/custom section /pb-syringe.png" alt="Peanut Butter Syringe" class="syringe">
                         </div>
                     </div>
-                    <div class="col-lg-4" style="margin-top: 320px;">
+                    <div class="col-lg-4 custom-selections-col" style="margin-top: 320px;">
                         <div id="custom-selections-container">
                             <h4 id="your-creation-heading" style="display: none;">Custom Items:</h4>
                             <ul id="custom-selections-list" class="list-group"></ul>
@@ -477,9 +487,9 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">Yummy</strong> <span>All Rights Reserved</span></p>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Cupcake Booth</strong> <span>All Rights Reserved</span></p>
             <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="https://esalafredrick.github.io/My-website-portfolio/">Esala Fredrick</a>
             </div>
         </div>
 
@@ -644,6 +654,8 @@
                             syringe = document.getElementById('chocolate-syringe');
                         } else if (fillingName.includes('strawberry')) {
                             syringe = document.getElementById('strawberry-syringe');
+                        } else if (fillingName.includes('peanut')) {
+                            syringe = document.getElementById('peanut-butter-syringe');
                         }
 
                         if (syringe) {
@@ -748,7 +760,8 @@
                 base: 200,
                 topping: 200,
                 filling: 100,
-                decoration: 100
+                decoration: 100,
+                sprinkles: 100
             };
 
             const defaultBase = { name: 'Vanilla', price: prices.base, src: 'assets/img/bases/vanilla.png' };
@@ -758,13 +771,21 @@
                 base: null,
                 topping: null,
                 filling: null,
-                decoration: null
+                decoration: null,
+                sprinkles: null
             };
 
 
             const imageElements = {
                 base: document.getElementById('cupcake-base'),
                 topping: document.getElementById('cupcake-topping'),
+                strawberryHalf1: document.getElementById('strawberry-half-1'),
+                strawberryHalf2: document.getElementById('strawberry-half-2'),
+                orangeSlice1: document.getElementById('orange-slice-1'),
+                orangeSlice2: document.getElementById('orange-slice-2'),
+                orangeSlice3: document.getElementById('orange-slice-3'),
+                orangeSlice4: document.getElementById('orange-slice-4'),
+                sprinkles: document.getElementById('cupcake-sprinkles'),
             };
 
             function calculateTotalPrice() {
@@ -809,7 +830,18 @@
                     if (layerToRemove === 'topping') {
                         imageElements.topping.style.display = 'none';
                         imageElements.topping.src = '';
-                    }
+                    } else if (layerToRemove === 'decoration') {
+                        selectedOptions.decoration = null;
+                        imageElements.strawberryHalf1.style.display = 'none';
+                        imageElements.strawberryHalf2.style.display = 'none';
+                        imageElements.orangeSlice1.style.display = 'none';
+                        imageElements.orangeSlice2.style.display = 'none';
+                        imageElements.orangeSlice3.style.display = 'none';
+                        imageElements.orangeSlice4.style.display = 'none';
+                    } else if (layerToRemove === 'sprinkles') {
+                        imageElements.sprinkles.style.display = 'none';
+
+                    } 
                     // Add logic for other removable layers (e.g., decorations)
                 }
 
@@ -852,6 +884,28 @@
                         imageElements.topping.src = selectedOptions.topping.src;
                         imageElements.topping.style.display = 'block';
                     }
+                    if (selectedOptions.decoration) {
+                        const name = selectedOptions.decoration.name.toLowerCase();
+                        if (name.includes('strawberry')) {
+                            imageElements.strawberryHalf1.src = 'assets/img/custom section /stawbery half.png';
+                            imageElements.strawberryHalf2.src = 'assets/img/custom section /stawbery half.png';
+                            imageElements.strawberryHalf1.style.display = 'block';
+                            imageElements.strawberryHalf2.style.display = 'block';
+                        } else if (name.includes('orange')) {
+                            imageElements.orangeSlice1.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice2.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice3.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice4.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice1.style.display = 'block';
+                            imageElements.orangeSlice2.style.display = 'block';
+                            imageElements.orangeSlice3.style.display = 'block';
+                            imageElements.orangeSlice4.style.display = 'block';
+                        }
+                    }
+                    if (selectedOptions.sprinkles) {
+                        imageElements.sprinkles.src = selectedOptions.sprinkles.src;
+                        imageElements.sprinkles.style.display = 'block';
+                    }
                 }
                 updatePriceDisplay();
                 updateSelectionsList();
@@ -865,6 +919,7 @@
                     const layer = this.dataset.layer;
                     const name = this.textContent;
                     const src = this.dataset.src;
+                    const specialType = this.dataset.special;
 
                     // Show the "Your Creation" heading
                     creationHeading.style.display = 'block';
@@ -873,8 +928,13 @@
                     cupcakePrompt.style.display = 'none';
 
                     // --- Pricing and State Update Logic ---
-                    const price = prices[layer] || 0;
-                    selectedOptions[layer] = { name, price, src };
+                    let effectiveLayer = layer;
+                    if (layer === 'decoration' && specialType === 'sprinkles-combo') {
+                        effectiveLayer = 'sprinkles';
+                    }
+
+                    const price = prices[effectiveLayer] || 0;
+                    selectedOptions[effectiveLayer] = { name, price, src };
                     updatePriceDisplay();
                     updateSelectionsList();
 
@@ -888,6 +948,34 @@
                     } else if (layer === 'topping') {
                         imageElements.topping.src = src;
                         imageElements.topping.style.display = 'block';
+                    } else if (layer === 'decoration') {
+                        if (specialType !== 'sprinkles-combo') {
+                            // Hide other decorations when a new non-sprinkle one is chosen
+                            imageElements.strawberryHalf1.style.display = 'none';
+                            imageElements.strawberryHalf2.style.display = 'none';
+                            imageElements.orangeSlice1.style.display = 'none';
+                            imageElements.orangeSlice2.style.display = 'none';
+                            imageElements.orangeSlice3.style.display = 'none';
+                            imageElements.orangeSlice4.style.display = 'none';
+                        }
+                        if (specialType === 'strawberry-combo') {
+                            imageElements.strawberryHalf1.src = 'assets/img/custom section /stawbery half.png';
+                            imageElements.strawberryHalf2.src = 'assets/img/custom section /stawbery half.png';
+                            imageElements.strawberryHalf1.style.display = 'block';
+                            imageElements.strawberryHalf2.style.display = 'block';
+                        } else if (specialType === 'orange-combo') {
+                            imageElements.orangeSlice1.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice2.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice1.style.display = 'block';
+                            imageElements.orangeSlice2.style.display = 'block';
+                            imageElements.orangeSlice3.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice4.src = 'assets/img/custom section /orange slise.png';
+                            imageElements.orangeSlice3.style.display = 'block';
+                            imageElements.orangeSlice4.style.display = 'block';
+                        } else if (specialType === 'sprinkles-combo') {
+                            imageElements.sprinkles.src = src;
+                            imageElements.sprinkles.style.display = 'block';
+                        }
                     } else if (layer === 'filling') {
                         let syringe;
                         const fillingName = name.toLowerCase();
@@ -895,6 +983,8 @@
                             syringe = document.getElementById('chocolate-syringe');
                         } else if (fillingName.includes('strawberry')) {
                             syringe = document.getElementById('strawberry-syringe');
+                        } else if (fillingName.includes('peanut')) {
+                            syringe = document.getElementById('peanut-butter-syringe');
                         }
 
                         if (syringe) {
@@ -932,7 +1022,7 @@
                 clonedBuilder.id = '';
                 // Remove syringe elements from the clone so they don't fly to the cart
                 clonedBuilder.querySelectorAll('.syringe').forEach(s => s.remove());
-
+                clonedBuilder.style.marginTop = '0';
                 clonedBuilder.classList.add('flying-product-image');
 
                 const startRect = cupcakeBuilder.getBoundingClientRect();

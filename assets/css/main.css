@@ -638,6 +638,7 @@ section.events-menu-open {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: contain; /* Ensure the topping image fits without being cropped */
+  z-index: 4;
 }
 
 .cupcake-builder .syringe {
@@ -1178,4 +1179,91 @@ section.events-menu-open {
   }
 }
 
-@media (min-width: 768px) {}
+@media (max-width: 991px) {
+  #events .cupcake-builder-col,
+  #events .custom-selections-col {
+    margin-top: 40px !important; /* Adjust this value as needed */
+  }
+
+  #events .cupcake-builder-col {
+    margin-top: 20px !important; /* Bring the cupcake image closer to the buttons */
+  }
+
+  .cupcake-builder {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+#strawberry-half-1, #strawberry-half-2 {
+  position: absolute;
+  object-fit: contain;
+}
+
+#strawberry-half-1 {
+  width: 100px;
+  height: 100px;
+  top: -2%;
+  left: 60%;
+  transform: translateX(-50%) rotate(80deg);
+  z-index: 4; /* Above topping */
+}
+
+#strawberry-half-2 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 35%;
+  transform: translateX(-50%) rotate(-45deg);
+  z-index: 4; /* Behind the topping */
+}
+
+#orange-slice-1, #orange-slice-2, #orange-slice-3, #orange-slice-4 {
+  position: absolute;
+  object-fit: contain;
+  z-index: 5; /* Above topping */
+}
+
+#orange-slice-1 {
+  width: 100px;
+  height: 100px;
+  top: 18%;
+  left: 35%;
+  transform: translateX(-50%) rotate(-65deg);
+}
+
+#orange-slice-2 {
+  width: 100px;
+  height: 100px;
+  top: 18%;
+  left: 65%;
+  transform: translateX(-50%) rotate(65deg);
+}
+
+#orange-slice-3 {
+  width: 100px;
+  height: 100px;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%) rotate(10deg);
+}
+
+#orange-slice-4 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) rotate(190deg);
+}
+
+#cupcake-sprinkles {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 6; /* Above topping and other decorations */
+  border-radius: 80px;
+}
