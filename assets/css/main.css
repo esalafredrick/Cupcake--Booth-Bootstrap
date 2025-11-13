@@ -821,7 +821,7 @@ section.events-menu-open {
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
-.why-us .icon-box {
+.about .icon-box {
   background-color: pink;
   text-align: center;
   padding: 40px 30px;
@@ -831,7 +831,7 @@ section.events-menu-open {
   border-radius: 20px;
 }
 
-.why-us .icon-box i {
+.about .icon-box i {
   color: black;
   font-size: 32px;
   margin-bottom: 30px;
@@ -845,19 +845,19 @@ section.events-menu-open {
   transition: 0.3s;
 }
 
-.why-us .icon-box h4 {
+.about .icon-box h4 {
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 30px 0;
   font-family: var(--default-font);
 }
 
-.why-us .icon-box p {
+.about .icon-box p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.why-us .icon-box:hover i {
+.about .icon-box:hover i {
   color: var(--contrast-color);
   background: white;
 }
@@ -923,6 +923,7 @@ section.events-menu-open {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
   border-radius: 50px;
+  
 }
 
 .contact .info-item .icon {
@@ -937,6 +938,7 @@ section.events-menu-open {
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
   margin-right: 15px;
+  
 }
 
 .contact .info-item h3 {
@@ -972,6 +974,8 @@ section.events-menu-open {
   padding: 30px;
   margin-top: 30px;
   border-radius: 20px;
+  border: #000000 solid 1px;
+
 }
 
 @media (max-width: 575px) {
