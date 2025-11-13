@@ -1057,7 +1057,7 @@ section.events-menu-open {
   color: #000000;
   padding: 10px 15px;
   border-radius: 20px;
-  border: none;
+  border: 2px solid #000000;
   cursor: pointer;
   width: 160px; /* Set a fixed width for alignment */
 }
