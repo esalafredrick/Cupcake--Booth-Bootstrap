@@ -188,9 +188,7 @@ h6 {
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  
 }
-
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
