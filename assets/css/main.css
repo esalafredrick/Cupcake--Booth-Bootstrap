@@ -155,7 +155,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 50px;
+  max-height: 38px;
   margin-right: 40px;
 }
 
@@ -169,7 +169,7 @@ h6 {
 
 .header .logo span {
   color: var(--accent-color);
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .header .btn-getstarted,
@@ -639,7 +639,7 @@ section.events-menu-open {
   z-index: 4;
 }
 
-.cupcake-builder .syringe {
+/* .cupcake-builder .syringe {
   position: absolute;
   width: 150px;
   height: auto;
@@ -649,9 +649,9 @@ section.events-menu-open {
   transform: rotate(-45deg);
   top: -100px;
   left: -100px;
-}
+} */
 
-@keyframes inject-animation {
+/* @keyframes inject-animation {
   0% {
     opacity: 1;
     transform: translate(0, 0) rotate(-45deg);
@@ -672,7 +672,7 @@ section.events-menu-open {
     transform: translate(300px, 300px) rotate(-45deg);
     opacity: 0;
   }
-}
+} */
 
 @media (max-width: 767px) {
   .cupcake-builder {
@@ -740,7 +740,47 @@ section.events-menu-open {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  
 }
+.hero-h1-ck {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  background: #F30086;
+background: linear-gradient(to right, #F30086 0%, #FF7EE7 33%, #1DDDEF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.add-to-cart-btn-ev {
+  color: var(--contrast-color);
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 8px 5px 8px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: #000000 solid 2px;
+  margin-left: 10px;
+}
+
+.add-to-cart-btn-ev:hover{
+  color: white;
+  background: #f30086ce;
+
+}
+.form-control{
+  border: #000000 solid 2px;
+  border-radius: 50px;
+}
+
+input[type="number"]:focus {
+        outline: none; /* Remove default outline */
+        border-color: #f30086ce; /* Example focus border color */
+        box-shadow: 0 0 5px #f30086ce; /* Example focus shadow */
+    }
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
@@ -752,7 +792,7 @@ section.events-menu-open {
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: white;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
@@ -764,8 +804,8 @@ section.events-menu-open {
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: white;
+  background: #f30086ce;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
@@ -808,6 +848,7 @@ section.events-menu-open {
   font-weight: 700;
   font-size: 28px;
   margin-bottom: 20px;
+  
 }
 
 .about .fst-italic {
@@ -821,13 +862,22 @@ section.events-menu-open {
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
-.about .icon-box {
-  background-color: pink;
+.why-us .icon-box {
   text-align: center;
   padding: 40px 30px;
   width: 100%;
   height: 100%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 20px;
+  background-color: pink;
+}
+
+.why-us .icon-box {
+  text-align: center;
+  padding: 40px 30px;
+  width: 100%;
+  height: 100%;
+  border: black solid 2px;
   border-radius: 20px;
 }
 
@@ -843,6 +893,7 @@ section.events-menu-open {
   width: 72px;
   height: 72px;
   transition: 0.3s;
+  
 }
 
 .about .icon-box h4 {
@@ -903,10 +954,15 @@ section.events-menu-open {
 .menu .menu-item .price {
   font-size: 24px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: #f30086ce;
   margin: 0;
 }
 
+.events .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f30086ce;
+}
 .menu .btn-get-started {
   font-size: 15px;
   color: var(--contrast-color);
@@ -919,16 +975,16 @@ section.events-menu-open {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: pink;
+  border: #000000 solid 2px;
   padding: 20px 30px;
   border-radius: 50px;
   
 }
 
 .contact .info-item .icon {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: black;
+  background-color: pink;
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -939,6 +995,10 @@ section.events-menu-open {
   border-radius: 50%;
   margin-right: 15px;
   
+}
+.contact .info-item:hover{
+  color: black;
+  background: white;
 }
 
 .contact .info-item h3 {
@@ -970,7 +1030,7 @@ section.events-menu-open {
 
 .contact .php-email-form {
   background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border: #000000 solid 2px;
   padding: 30px;
   margin-top: 30px;
   border-radius: 20px;
@@ -1008,18 +1068,25 @@ section.events-menu-open {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
+
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: rgb(255, 255, 255);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
   border-radius: 50px;
+  transition: 0.5s;
+  
   border: #000000 solid 2px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: white;
+  background: #f30086ce;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
 /* Custom styles for cart icon and badge */
@@ -1051,15 +1118,39 @@ section.events-menu-open {
   position: relative; /* Added for positioning context */
 }
 
+.custom-menu-toggle {
+  color: black;
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: #000000 solid 2px;
+}
 
-.dropdown-flavor button {
-  background-color: pink;
-  color: #000000;
-  padding: 10px 15px;
-  border-radius: 20px;
-  border: 2px solid #000000;
-  cursor: pointer;
-  width: 160px; /* Set a fixed width for alignment */
+.custom-menu-toggle:hover {
+  color: white;
+  background: #f30086ce;
+}
+
+.btn.btn-primary.me-3 {
+  color: black;
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: #000000 solid 2px !important; /* Added !important to override Bootstrap */
+}
+.btn.btn-primary.me-3:hover {
+  color: white;
+  background: #f30086ce;
 }
 .dropdown-flavor a {
   display: block;
@@ -1091,47 +1182,6 @@ section.events-menu-open {
 
 }
 
-.carousel {
-  margin: 100px auto;
-  width: 90%;
-  display: flex;
-  overflow-x: auto;
-  background:none;
-}
-.carousel::-webkit-scrollbar{
-  display: none;
-}
-.group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  animation: spin 15s infinite linear;
-  padding-right: 1em;
-}
-@media (max-width: 767px) {
-  .carousel {
-    margin-top: 20px;
-  }
-}
-
-
-.card img {
-  flex: 0 0 100px;
-  padding: 0;
-  object-fit: cover; /* Ensure the image covers the area without distortion */
-  display: flex; /* Use flexbox for centering content */
-  justify-content: center;
-  align-items: center;
-  /* Remove or comment out the line below to remove the border */
-  /* border: solid white 5px; */
-}
-
-@keyframes spin {
- from {translate: 0;}
- to {translate: -100%;}
-}
-
 @media (max-width: 767px) {
   .custom-dropdown-row .col-3 {
     padding-left: 5px;
@@ -1160,20 +1210,6 @@ section.events-menu-open {
     text-align: center;
   }
   
-  .custom-dropdown-row .col-3:last-child .custom-menu-content {
-    left: auto;
-    right: 0;
-  }
-
-  .custom-menu-active .custom-menu-content {
-    display: block;
-  }
-
-  .custom-menu-active .custom-menu-toggle {
-    z-index: 9999;
-    position: relative;
-  }
-
   .dropdown-flavor a {
     padding: 10px 20px;
     font-size: 17px;
@@ -1268,4 +1304,50 @@ section.events-menu-open {
   object-fit: contain;
   z-index: 6; /* Above topping and other decorations */
   border-radius: 80px;
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  border: #000000 solid 2px;
+}
+
+.hero .btn-get-started:hover {
+  color: white;
+  background: #f30086ce;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.btn-get-started-signup{
+  color: #000000;
+  border: solid black 2px;
+  border-radius: 25px;
+  padding: 3px 8px 3px 8px;
+  transition: ease-in-out 0.3s;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn-get-started-signup:hover{
+  color: white;
+  background-color: #f30086ce;
+}
+
+.cart-icon-des{
+  color: #000000;
+  transition: ease-in-out 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cart-icon-des:hover{
+  color:#f30086;
 }

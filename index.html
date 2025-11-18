@@ -32,8 +32,8 @@
         <div class="container position-relative d-flex align-items-center justify-content-between">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <img src="assets/img/CB__2_-removebg-preview.webp" alt="Cupcake Booth logo">
-                <h1 class="sitename">Cupcake Booth</h1>
+                <img src="assets/img/CB__2_-removebg-preview.png" alt="Cupcake Booth logo">
+                <h1 class="sitename">Cupcake <span class="booth-h1-custom">Booth</span></h1>
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
@@ -46,9 +46,9 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
             <div class="d-flex align-items-center">
-                <a class="btn-get-started" href="login.html" style="margin-right: 25px;">Sign In</a>
-                <a href="cart.html" class="cart-icon-container" style="color: black;">
-                    <i class="bi bi-cart" style="font-size: 23px;"></i>
+                <a class="btn-get-started-signup" href="login.html" style="margin-right: 25px;">Sign In</a>
+                <a href="cart.html" class="cart-icon-container">
+                    <i class="bi bi-cart cart-icon-des"></i>
                     <span id="cart-badge" class="badge rounded-pill bg-danger cart-badge" style="display: none;">0</span>
                 </a>
             </div>
@@ -59,11 +59,11 @@
 
         <section id="hero" class="hero section light-background">
 
-            <div class="container">
+            <div class="container" style="margin-top: 50px;">
                 <div class="row gy-4 justify-content-center justify-content-lg-between">
                     <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up">Freshly Baked<br>Cupcakes</h1>
-                        <p data-aos="fade-up" data-aos-delay="100">Sri lanka's 1<sup>st</sup> ever custom cupcake online designer.</p>
+                        <h1 data-aos="fade-up" style="margin-top: 100px;">Freshly Baked<span class="hero-h1-ck"> Cupcakes</span></h1>
+                        <p data-aos="fade-up" data-aos-delay="100">Sri lanka's 1<sup>st</sup> ever custom cupcake designer.</p>
                         <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="200">
                             <a href="#events" class="btn-get-started">Design Your Cupcake</a>
                             <a href="#menu" class="btn-get-started">Explore Menu</a>
@@ -77,19 +77,17 @@
 
         </section>
         
-        <section id="about" class="about section light-background">
-            <div class="container section-title" data-aos="fade-up" style="margin-top: 70px;">
+        <section id="about" class="why-us section light-background">
+
+            <div class="container section-title" data-aos="fade-up">
                 <h2>About</h2>
                 <p><span>Learn More</span> <span class="description-title">About Us</span></p>
-            </div>
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                            <i class="bi bi-house-door"></i>
-                            <h4>Baked with Love at Home</h4>
-                            <p>Each cupcake is handcrafted in our home kitchen, ensuring fresh, authentic flavor and a personal touch you won't find anywhere else.</p>
-                        </div>
+            </div><div class="container">
+
+    <div class="row gy-4 justify-content-center"> <div class="col-lg-12 d-flex align-items-stretch"> <div class="row gy-4 justify-content-center w-100" data-aos="fade-up" data-aos-delay="200"> <div class="col-xl-4 col-md-6"> <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-house-door"></i>
+                        <h4>Baked with Love at Home</h4>
+                        <p>Each cupcake is handcrafted in our home kitchen, ensuring fresh, authentic flavor and a personal touch you won't find anywhere else.</p>
                     </div>
                     <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box d-flex flex-column justify-content-center align-items-center">
@@ -109,7 +107,7 @@
             </div>
         </section>
 
-        <section id="menu" class="menu section">
+        <section id="menu" class="menu section" style="margin-top: 90px;">
 
             <div class="container section-title" data-aos="fade-up">
                 <h2>Our Menu</h2>
@@ -125,7 +123,7 @@
                         <p class="price">
                             Rs.350
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-chocolate" class="me-2">Amount</label><input type="number" id="units-chocolate" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-chocolate" class="me-2">Amount</label><input type="number" id="units-chocolate" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
 
 
@@ -137,7 +135,7 @@
                         <p class="price">
                             Rs.350
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-vanilla" class="me-2">Amount</label><input type="number" id="units-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-vanilla" class="me-2">Amount</label><input type="number" id="units-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -147,7 +145,7 @@
                         <p class="price">
                             Rs.400
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-strawberry" class="me-2">Amount</label><input type="number" id="units-strawberry" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-strawberry" class="me-2">Amount</label><input type="number" id="units-strawberry" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -157,7 +155,7 @@
                         <p class="price">
                             Rs.400
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-coffee" class="me-2">Amount</label><input type="number" id="units-coffee" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-coffee" class="me-2">Amount</label><input type="number" id="units-coffee" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -167,7 +165,7 @@
                         <p class="price">
                             Rs.450
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-choc-vanilla" class="me-2">Amount</label><input type="number" id="units-choc-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-choc-vanilla" class="me-2">Amount</label><input type="number" id="units-choc-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -177,7 +175,7 @@
                         <p class="price">
                             Rs.400
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-vanilla-choc" class="me-2">Amount</label><input type="number" id="units-vanilla-choc" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-vanilla-choc" class="me-2">Amount</label><input type="number" id="units-vanilla-choc" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -187,7 +185,7 @@
                         <p class="price">
                             Rs.450
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-peanut-butter" class="me-2">Amount</label><input type="number" id="units-peanut-butter" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-peanut-butter" class="me-2">Amount</label><input type="number" id="units-peanut-butter" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -197,7 +195,7 @@
                         <p class="price">
                             Rs.450
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-smarties-choc" class="me-2">Amount</label><input type="number" id="units-smarties-choc" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-smarties-choc" class="me-2">Amount</label><input type="number" id="units-smarties-choc" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -207,7 +205,7 @@
                         <p class="price">
                             Rs.420
                         </p>
-                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-smarties-vanilla" class="me-2">Amount</label><input type="number" id="units-smarties-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="btn btn-primary ms-2 add-to-cart-btn">Add to Cart</button></div>
+                        <div class="d-flex justify-content-center align-items-center mt-3"><label for="units-smarties-vanilla" class="me-2">Amount</label><input type="number" id="units-smarties-vanilla" name="units" min="1" value="1" max="100" class="form-control" style="width: 80px;"><button class="add-to-cart-btn-ev">Add to Cart</button></div>
 
                     </div>
 
@@ -222,45 +220,6 @@
                 <h2>Custom</h2>
                  <p><span>Design Your</span> <span class="description-title">Cupcake</span></p>
             </div><div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="carousel">
-                    <div class="group">
-                        <div class="card"><img src="assets/img/maincupcake v17.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v16.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v15.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v14.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v13.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v12.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake 3.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake 2.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        
-                        
-                    </div>
-
-                    <div aria-hidden class="group">
-                        <div class="card"><img src="assets/img/maincupcake v17.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v16.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v15.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v14.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v13.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v12.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake 3.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake 2.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.webp" alt="Custom Cupcake" width="300" height="300"></div>
-                        
-                    </div>
-                </div>
-                    
-
-
-
-
-
                  
                 
 
@@ -280,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
+                    <!-- <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="fillings-dropdown">
                             <button class="custom-menu-toggle">Fillings</button>
                             <div class="dropdown-content custom-menu-content" data-layer="filling">
@@ -289,7 +248,7 @@
                                 <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/peanut.webp">Peanut Butter</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="decorations-dropdown">
                             <button class="custom-menu-toggle">Decorations</button>
@@ -318,7 +277,7 @@
                 </div>
 
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-6 cupcake-builder-col" style="margin-top: 250px;">
+                    <div class="col-lg-6 cupcake-builder-col" style="margin-top: 200px;">
                         <div id="cupcake-builder" class="cupcake-builder">
                             <h2 id="custom-cupcake-prompt" class="text-center text-muted" style="margin-left:400px; white-space: nowrap;">Make your custom cupcake</h2>
                             <img id="cupcake-base" src="" alt="Cupcake Base" style="display:none;">
@@ -330,12 +289,12 @@
                             <img id="orange-slice-3" src="" alt="Orange Slice 3" style="display:none;">
                             <img id="orange-slice-4" src="" alt="Orange Slice 4" style="display:none;">
                             <img id="cupcake-sprinkles" src="" alt="Sprinkles" style="display:none;">
-                            <img id="chocolate-syringe" src="assets\img\custom section\c syringe.webp" alt="Chocolate Syringe" class="syringe">
-                            <img id="strawberry-syringe" src="assets/img/custom section/straw jam syringe.webp" alt="Strawberry Jam Syringe" class="syringe">
-                            <img id="peanut-butter-syringe" src="assets/img/custom section/pb-syringe.webp" alt="Peanut Butter Syringe" class="syringe">
+                            <!-- <img id="chocolate-syringe" src="assets/img/custom section/c syringe.png" alt="Chocolate Syringe" class="syringe">
+                            <img id="strawberry-syringe" src="assets/img/custom section//straw jam syringe.png" alt="Strawberry Jam Syringe" class="syringe">
+                            <img id="peanut-butter-syringe" src="assets/img/custom section//pb-syringe.png" alt="Peanut Butter Syringe" class="syringe"> -->
                         </div>
                     </div>
-                    <div class="col-lg-4 custom-selections-col" style="margin-top: 320px;">
+                    <div class="col-lg-4 custom-selections-col" style="margin-top: 250px;">
                         <div id="custom-selections-container">
                             <h4 id="your-creation-heading" style="display: none;">Custom Items:</h4>
                             <ul id="custom-selections-list" class="list-group"></ul>
@@ -344,7 +303,7 @@
                 </div>
 
                 <div class="text-center d-flex justify-content-center align-items-center mt-4">
-                    <button id="add-custom-cupcake-to-cart" class="btn btn-primary me-3">Finalize and Add to Cart</button>
+                    <button id="add-custom-cupcake-to-cart" class="btn btn-primary me-3">Add to Cart</button>
                     <h4 id="custom-cupcake-price" class="price mb-0">Rs.0</h4>
                 </div>
 
@@ -520,7 +479,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn-ev');
 
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', (event) => {
@@ -599,7 +558,7 @@
             const prices = {
                 base: 200,
                 topping: 200,
-                filling: 100,
+                // filling: 100,
                 decoration: 100,
                 sprinkles: 100
             };
@@ -610,7 +569,7 @@
             let selectedOptions = JSON.parse(localStorage.getItem('customCupcakeState')) || {
                 base: null,
                 topping: null,
-                filling: null,
+                // filling: null,
                 decoration: null,
                 sprinkles: null
             };
@@ -816,23 +775,24 @@
                             imageElements.sprinkles.src = src;
                             imageElements.sprinkles.style.display = 'block';
                         }
-                    } else if (layer === 'filling') {
-                        let syringe;
-                        const fillingName = name.toLowerCase();
-                        if (fillingName.includes('chocolate')) {
-                            syringe = document.getElementById('chocolate-syringe');
-                        } else if (fillingName.includes('strawberry')) {
-                            syringe = document.getElementById('strawberry-syringe');
-                        } else if (fillingName.includes('peanut butter')) {
-                            syringe = document.getElementById('peanut-butter-syringe');
-                        }
+                    } 
+                    // else if (layer === 'filling') {
+                    //     let syringe;
+                    //     const fillingName = name.toLowerCase();
+                    //     if (fillingName.includes('chocolate')) {
+                    //         syringe = document.getElementById('chocolate-syringe');
+                    //     } else if (fillingName.includes('strawberry')) {
+                    //         syringe = document.getElementById('strawberry-syringe');
+                    //     } else if (fillingName.includes('peanut')) {
+                    //         syringe = document.getElementById('peanut-butter-syringe');
+                    //     }
 
-                        if (syringe) {
-                            document.querySelectorAll('.syringe').forEach(s => s.style.animation = 'none');
-                            syringe.offsetHeight; // Trigger reflow
-                            syringe.style.animation = 'inject-animation 2s ease-in-out';
-                        }
-                    }
+                    //     if (syringe) {
+                    //         document.querySelectorAll('.syringe').forEach(s => s.style.animation = 'none');
+                    //         syringe.offsetHeight; // Trigger reflow
+                    //         syringe.style.animation = 'inject-animation 2s ease-in-out';
+                    //     }
+                    // }
                 });
             });
 
