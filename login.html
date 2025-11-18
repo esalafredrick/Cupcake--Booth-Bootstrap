@@ -37,10 +37,28 @@
 
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container position-relative d-flex align-items-center justify-content-between">
+
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <img src="assets/img/CB__2_-removebg-preview.png" alt="Cupcake Booth logo">
                 <h1 class="sitename">Cupcake <span class="booth-h1-custom">Booth</span></h1>
             </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html#hero" class="">Home</a></li>
+                    <li><a href="index.html#about" class="">About</a></li>
+                    <li><a href="index.html#menu" class="">Menu</a></li>
+                    <li><a href="index.html#events">Custom</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <div class="d-flex align-items-center">
+                <a class="btn-get-started" href="signup.html" style="margin-right: 25px;">Sign Up</a>
+                <a href="cart.html" class="cart-icon-container" style="color: black;">
+                    <i class="bi bi-cart" style="font-size: 23px;"></i>
+                    <span id="cart-badge" class="badge rounded-pill bg-danger cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -49,7 +67,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-8">
-                        <div class="card">
+                        <div class="card" style="border: 2px solid #000000;">
                             <div class="card-body p-5">
                                 <div class="section-title text-center">
                                     <h2>Sign In</h2>
