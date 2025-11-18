@@ -740,6 +740,17 @@ section.events-menu-open {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  
+}
+.hero-h1-ck {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  background: #F30086;
+background: linear-gradient(to right, #F30086 0%, #FF7EE7 33%, #1DDDEF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
 }
 
 .hero p {
@@ -752,7 +763,7 @@ section.events-menu-open {
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: white;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
@@ -764,8 +775,8 @@ section.events-menu-open {
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: white;
+  background: #f30086ce;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
