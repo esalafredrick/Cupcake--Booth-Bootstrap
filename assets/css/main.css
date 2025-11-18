@@ -762,7 +762,6 @@ background: linear-gradient(to right, #F30086 0%, #FF7EE7 33%, #1DDDEF 100%);
   padding: 5px 8px 5px 8px;
   border-radius: 50px;
   transition: 0.5s;
-  /*box-shadow: 0 8px 28px #f30086ce;*/
   border: #000000 solid 2px;
   margin-left: 10px;
 }
@@ -770,7 +769,6 @@ background: linear-gradient(to right, #F30086 0%, #FF7EE7 33%, #1DDDEF 100%);
 .add-to-cart-btn-ev:hover{
   color: white;
   background: #f30086ce;
-  /*box-shadow: 0 8px 28px #f30086ce;*/
 
 }
 .form-control{
@@ -1096,15 +1094,39 @@ input[type="number"]:focus {
   position: relative; /* Added for positioning context */
 }
 
+.custom-menu-toggle {
+  color: black;
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: #000000 solid 2px;
+}
 
-.dropdown-flavor button {
-  background-color: pink;
-  color: #000000;
-  padding: 10px 15px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  width: 160px; /* Set a fixed width for alignment */
+.custom-menu-toggle:hover {
+  color: white;
+  background: #f30086ce;
+}
+
+.btn.btn-primary.me-3 {
+  color: black;
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: #000000 solid 2px !important; /* Added !important to override Bootstrap */
+}
+.btn.btn-primary.me-3:hover {
+  color: white;
+  background: #f30086ce;
 }
 .dropdown-flavor a {
   display: block;
@@ -1205,20 +1227,6 @@ input[type="number"]:focus {
     text-align: center;
   }
   
-  .custom-dropdown-row .col-3:last-child .custom-menu-content {
-    left: auto;
-    right: 0;
-  }
-
-  .custom-menu-active .custom-menu-content {
-    display: block;
-  }
-
-  .custom-menu-active .custom-menu-toggle {
-    z-index: 9999;
-    position: relative;
-  }
-
   .dropdown-flavor a {
     padding: 10px 20px;
     font-size: 17px;
