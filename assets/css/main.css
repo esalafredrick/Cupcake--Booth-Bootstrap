@@ -1265,3 +1265,18 @@ section.events-menu-open {
   z-index: 6; /* Above topping and other decorations */
   border-radius: 80px;
 }
+
+.btn-get-started-signup{
+  color: #000000;
+  border: solid black 2px;
+  border-radius: 25px;
+  padding: 3px 8px 3px 8px;
+  transition: ease-in-out 0.3sec;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn-get-started-signup:hover{
+  color: white;
+  background-color: #f30086ce;
+}
