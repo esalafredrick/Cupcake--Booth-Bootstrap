@@ -1271,7 +1271,7 @@ section.events-menu-open {
   border: solid black 2px;
   border-radius: 25px;
   padding: 3px 8px 3px 8px;
-  transition: ease-in-out 0.3sec;
+  transition: ease-in-out 0.3s;
   font-size: 13px;
   font-weight: bold;
 }
@@ -1280,3 +1280,15 @@ section.events-menu-open {
   color: white;
   background-color: #f30086ce;
 }
+
+.cart-icon-des{
+  color: #000000;
+  transition: ease-in-out 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cart-icon-des:hover{
+  color:#f30086;
+}
+
