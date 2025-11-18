@@ -848,6 +848,7 @@ input[type="number"]:focus {
   font-weight: 700;
   font-size: 28px;
   margin-bottom: 20px;
+  
 }
 
 .about .fst-italic {
@@ -862,12 +863,21 @@ input[type="number"]:focus {
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us .icon-box {
-  background-color: pink;
   text-align: center;
   padding: 40px 30px;
   width: 100%;
   height: 100%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 20px;
+  background-color: pink;
+}
+
+.why-us .icon-box {
+  text-align: center;
+  padding: 40px 30px;
+  width: 100%;
+  height: 100%;
+  border: black solid 2px;
   border-radius: 20px;
 }
 
@@ -883,6 +893,7 @@ input[type="number"]:focus {
   width: 72px;
   height: 72px;
   transition: 0.3s;
+  
 }
 
 .why-us .icon-box h4 {
@@ -943,10 +954,15 @@ input[type="number"]:focus {
 .menu .menu-item .price {
   font-size: 24px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: #f30086ce;
   margin: 0;
 }
 
+.events .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f30086ce;
+}
 .menu .btn-get-started {
   font-size: 15px;
   color: var(--contrast-color);
