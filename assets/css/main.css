@@ -169,7 +169,7 @@ h6 {
 
 .header .logo span {
   color: var(--accent-color);
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .header .btn-getstarted,
@@ -1291,4 +1291,3 @@ section.events-menu-open {
 .cart-icon-des:hover{
   color:#f30086;
 }
-
