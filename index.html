@@ -229,45 +229,6 @@
                 <h2>Custom</h2>
                  <p><span>Design Your</span> <span class="description-title">Cupcake</span></p>
             </div><div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="carousel">
-                    <div class="group">
-                        <div class="card"><img src="assets/img/maincupcake v17.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v16.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v15.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v14.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v13.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v12.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake 3.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake 2.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        
-                        
-                    </div>
-
-                    <div aria-hidden class="group">
-                        <div class="card"><img src="assets/img/maincupcake v17.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v16.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v15.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v14.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v13.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v12.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake 3.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake 2.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/main cupcake.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        <div class="card"><img src="assets/img/maincupcake v11.png" alt="Custom Cupcake" width="300" height="300"></div>
-                        
-                    </div>
-                </div>
-                    
-
-
-
-
-
                  
                 
 
@@ -287,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
+                    <!-- <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="fillings-dropdown">
                             <button class="custom-menu-toggle">Fillings</button>
                             <div class="dropdown-content custom-menu-content" data-layer="filling">
@@ -296,7 +257,7 @@
                                 <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/peanut.png">Peanut Butter</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
                         <div class="dropdown-flavor" id="decorations-dropdown">
                             <button class="custom-menu-toggle">Decorations</button>
@@ -337,9 +298,9 @@
                             <img id="orange-slice-3" src="" alt="Orange Slice 3" style="display:none;">
                             <img id="orange-slice-4" src="" alt="Orange Slice 4" style="display:none;">
                             <img id="cupcake-sprinkles" src="" alt="Sprinkles" style="display:none;">
-                            <img id="chocolate-syringe" src="assets/img/custom section/syringe.png" alt="Chocolate Syringe" class="syringe">
+                            <!-- <img id="chocolate-syringe" src="assets/img/custom section/c syringe.png" alt="Chocolate Syringe" class="syringe">
                             <img id="strawberry-syringe" src="assets/img/custom section//straw jam syringe.png" alt="Strawberry Jam Syringe" class="syringe">
-                            <img id="peanut-butter-syringe" src="assets/img/custom section//pb-syringe.png" alt="Peanut Butter Syringe" class="syringe">
+                            <img id="peanut-butter-syringe" src="assets/img/custom section//pb-syringe.png" alt="Peanut Butter Syringe" class="syringe"> -->
                         </div>
                     </div>
                     <div class="col-lg-4 custom-selections-col" style="margin-top: 250px;">
@@ -763,7 +724,7 @@
             const prices = {
                 base: 200,
                 topping: 200,
-                filling: 100,
+                // filling: 100,
                 decoration: 100,
                 sprinkles: 100
             };
@@ -774,7 +735,7 @@
             let selectedOptions = JSON.parse(localStorage.getItem('customCupcakeState')) || {
                 base: null,
                 topping: null,
-                filling: null,
+                // filling: null,
                 decoration: null,
                 sprinkles: null
             };
@@ -980,23 +941,24 @@
                             imageElements.sprinkles.src = src;
                             imageElements.sprinkles.style.display = 'block';
                         }
-                    } else if (layer === 'filling') {
-                        let syringe;
-                        const fillingName = name.toLowerCase();
-                        if (fillingName.includes('chocolate')) {
-                            syringe = document.getElementById('chocolate-syringe');
-                        } else if (fillingName.includes('strawberry')) {
-                            syringe = document.getElementById('strawberry-syringe');
-                        } else if (fillingName.includes('peanut')) {
-                            syringe = document.getElementById('peanut-butter-syringe');
-                        }
+                    } 
+                    // else if (layer === 'filling') {
+                    //     let syringe;
+                    //     const fillingName = name.toLowerCase();
+                    //     if (fillingName.includes('chocolate')) {
+                    //         syringe = document.getElementById('chocolate-syringe');
+                    //     } else if (fillingName.includes('strawberry')) {
+                    //         syringe = document.getElementById('strawberry-syringe');
+                    //     } else if (fillingName.includes('peanut')) {
+                    //         syringe = document.getElementById('peanut-butter-syringe');
+                    //     }
 
-                        if (syringe) {
-                            document.querySelectorAll('.syringe').forEach(s => s.style.animation = 'none');
-                            syringe.offsetHeight; // Trigger reflow
-                            syringe.style.animation = 'inject-animation 2s ease-in-out';
-                        }
-                    }
+                    //     if (syringe) {
+                    //         document.querySelectorAll('.syringe').forEach(s => s.style.animation = 'none');
+                    //         syringe.offsetHeight; // Trigger reflow
+                    //         syringe.style.animation = 'inject-animation 2s ease-in-out';
+                    //     }
+                    // }
                 });
             });
 
