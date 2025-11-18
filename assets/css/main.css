@@ -750,6 +750,27 @@ section.events-menu-open {
 background: linear-gradient(to right, #F30086 0%, #FF7EE7 33%, #1DDDEF 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+
+.add-to-cart-btn-ev {
+  color: var(--contrast-color);
+  background: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 8px 5px 8px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  border: #000000 solid 2px;
+  margin-left: 10px;
+}
+
+.add-to-cart-btn-ev:hover{
+  color: white;
+  background: #f30086ce;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 
 }
 
