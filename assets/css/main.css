@@ -217,9 +217,6 @@ h6 {
   .header .logo {
     margin-left: auto !important;
     margin-right: auto !important;
-    /* position: absolute;
-    left: 50%;
-    transform: translateX(-50%); */
   }
 }
 
@@ -227,9 +224,14 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+.hero h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero h1, .hero-h1-ck {
+  font-size: 64px;
+}
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
@@ -405,6 +407,10 @@ h6 {
     display: block;
   }
 }
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
 
 .footer {
   --heading-font: var(--default-font);
@@ -613,9 +619,10 @@ section.events-menu-open {
 /* Cupcake Builder Styles */
 .cupcake-builder {
   position: relative;
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  width: 100%;
   margin: 0 auto;
+  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,49 +637,14 @@ section.events-menu-open {
 }
 
 #cupcake-topping {
-  width: 220px;   /* 300px - 80px */
-  height: 220px;  /* 300px - 80px */
-  top: 27%; /* Adjusted to move the topping up slightly */
+  width: 73.33%;
+  height: 73.33%;
+  top: 27%;
   left: 50%;
   transform: translate(-50%, -50%);
-  object-fit: contain; /* Ensure the topping image fits without being cropped */
+  object-fit: contain;
   z-index: 4;
 }
-
-/* .cupcake-builder .syringe {
-  position: absolute;
-  width: 150px;
-  height: auto;
-  z-index: 10;
-  opacity: 0;
-  pointer-events: none;
-  transform: rotate(-45deg);
-  top: -100px;
-  left: -100px;
-} */
-
-/* @keyframes inject-animation {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) rotate(-45deg);
-  }
-  30% {
-    transform: translate(180px, 180px) rotate(-45deg);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(190px, 190px) rotate(-45deg);
-    opacity: 1;
-  }
-  70% {
-    transform: translate(180px, 180px) rotate(-45deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(300px, 300px) rotate(-45deg);
-    opacity: 0;
-  }
-} */
 
 @media (max-width: 767px) {
   
@@ -680,12 +652,42 @@ section.events-menu-open {
     margin-left: 0 !important;
     white-space: normal !important;
     font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .hero .d-flex.gap-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .btn-get-started {
+    width: auto;
+    margin-top: 20px;
+  }
+  .hero p {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .hero h1, .hero-h1-ck {
+    font-size: 40px !important;
+    line-height: 1.2;
+    text-align: center;
   }
 
   #events .row.justify-content-center.align-items-center {
     flex-direction: column;
     width: 100%;
-    margin-top: 100px !important; /* Increased margin-top */
+    margin-top: 40px !important;
+  }
+
+  .custom-dropdown-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #events .cupcake-builder-col {
+    margin-top: 20px !important;
   }
 }
 
@@ -734,12 +736,6 @@ section.events-menu-open {
   align-items: center;
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 700;
-  
-}
 .hero-h1-ck {
   margin: 0;
   font-size: 64px;
@@ -812,11 +808,6 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
   .hero p {
     font-size: 18px;
     line-height: 24px;
@@ -826,6 +817,8 @@ input[type="number"]:focus {
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
+    padding: 10px 24px;
+    width: auto;
   }
 }
 
@@ -1162,12 +1155,12 @@ input[type="number"]:focus {
 }
 
 .dropdown-content {
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0;
-  visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -1180,8 +1173,6 @@ input[type="number"]:focus {
   margin-top: 10px;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .dropdown-flavor:hover .dropdown-content {
   opacity: 1;
@@ -1200,11 +1191,14 @@ input[type="number"]:focus {
   }
 
   .custom-menu-content {
-    display: none;
-    position: absolute; /* Changed from fixed to absolute */
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    white-space: normal;
     min-width: 160px;
-    top: 100%; /* Position below the button */
-    left: 0;
     max-height: 80vh;
     margin: 0;
     border: 2px solid #000;
@@ -1213,7 +1207,13 @@ input[type="number"]:focus {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9999;
-    text-align: center;
+    text-align: left;
+  }
+
+  .dropdown-flavor:hover .custom-menu-content,
+  .dropdown-flavor .custom-menu-toggle:focus + .custom-menu-content,
+  .custom-menu-content:hover {
+    display: block;
   }
   
   .dropdown-flavor a {
@@ -1223,30 +1223,14 @@ input[type="number"]:focus {
   }
 }
 
-@media (max-width: 991px) {
-  #events .cupcake-builder-col,
-  #events .custom-selections-col {
-    margin-top: 40px !important; /* Adjust this value as needed */
-  }
-
-  #events .cupcake-builder-col {
-    margin-top: 20px !important; /* Bring the cupcake image closer to the buttons */
-  }
-
-  .cupcake-builder {
-    width: 250px;
-    height: 250px;
-  }
-}
-
 #strawberry-half-1, #strawberry-half-2 {
   position: absolute;
   object-fit: contain;
 }
 
 #strawberry-half-1 {
-  width: 100px;
-  height: 100px;
+  width: 33.33%;
+  height: 33.33%;
   top: -2%;
   left: 60%;
   transform: translateX(-50%) rotate(80deg);
@@ -1254,8 +1238,8 @@ input[type="number"]:focus {
 }
 
 #strawberry-half-2 {
-  width: 100px;
-  height: 100px;
+  width: 33.33%;
+  height: 33.33%;
   top: 20%;
   left: 35%;
   transform: translateX(-50%) rotate(-45deg);
@@ -1266,35 +1250,29 @@ input[type="number"]:focus {
   position: absolute;
   object-fit: contain;
   z-index: 5; /* Above topping */
+  width: 33.33%;
+  height: 33.33%;
 }
 
 #orange-slice-1 {
-  width: 100px;
-  height: 100px;
   top: 18%;
   left: 35%;
   transform: translateX(-50%) rotate(-65deg);
 }
 
 #orange-slice-2 {
-  width: 100px;
-  height: 100px;
   top: 18%;
   left: 65%;
   transform: translateX(-50%) rotate(65deg);
 }
 
 #orange-slice-3 {
-  width: 100px;
-  height: 100px;
   top: 5%;
   left: 50%;
   transform: translateX(-50%) rotate(10deg);
 }
 
 #orange-slice-4 {
-  width: 100px;
-  height: 100px;
   top: 30%;
   left: 50%;
   transform: translateX(-50%) rotate(190deg);
@@ -1302,8 +1280,8 @@ input[type="number"]:focus {
 
 #cupcake-sprinkles {
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 46.67%;
+  height: 46.67%;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
