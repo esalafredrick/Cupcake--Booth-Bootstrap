@@ -1048,7 +1048,7 @@ input[type="number"]:focus {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 .contact .php-email-form input[type=text]:focus,
