@@ -684,8 +684,22 @@ section.events-menu-open {
   }
 
   .custom-dropdown-row {
-    flex-direction: column;
-    align-items: center;
+    /* flex-wrap: nowrap; */
+    /* gap: 10px; */
+    justify-content: space-between;
+  }
+
+  .custom-dropdown-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .custom-menu-toggle {
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
   }
 
   #events .cupcake-builder-col {
@@ -1203,9 +1217,11 @@ input[type="number"]:focus {
     min-width: 160px;
     max-height: 80vh;
     margin: 0;
-    border: 2px solid #000;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9999;

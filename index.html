@@ -24,6 +24,16 @@
 
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <style>
+        @media (max-width: 767.98px) {
+            .custom-dropdown-row .custom-menu-toggle {
+                padding: 8px 10px;
+                font-size: 14px;
+                min-width: 90px; /* Adjust as needed */
+            }
+        }
+    </style>
+
     </head>
 
 <body class="index-page">
@@ -227,7 +237,7 @@
                 
 
                 <div class="row justify-content-center custom-dropdown-row">
-                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
+                    <div class="col-lg-3 col-md-4 col-4 mb-3 text-center">
                         <div class="dropdown-flavor" id="toppings-dropdown">
                             <button class="custom-menu-toggle">Toppings</button>
                             <div class="dropdown-content custom-menu-content">
@@ -242,17 +252,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
-                        <div class="dropdown-flavor" id="fillings-dropdown">
-                            <button class="custom-menu-toggle">Fillings</button>
-                            <div class="dropdown-content custom-menu-content" data-layer="filling">
-                                <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/chocolate.webp">Chocolate Syrup</a>
-                                <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/strawberry.webp">Strawberry Jam</a>
-                                <a href="#" class="cupcake-option" data-layer="filling" data-src="assets/img/fillings/peanut.webp">Peanut Butter</a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
+                    <div class="col-lg-3 col-md-4 col-4 mb-3 text-center">
                         <div class="dropdown-flavor" id="decorations-dropdown">
                             <button class="custom-menu-toggle">Decorations</button>
                             <div class="dropdown-content custom-menu-content" data-layer="decoration">
@@ -266,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6 mb-3 text-center">
+                    <div class="col-lg-3 col-md-4 col-4 mb-3 text-center">
                         <div class="dropdown-flavor" id="bases-dropdown">
                             <button class="custom-menu-toggle">Bases</button>
                             <div class="dropdown-content custom-menu-content" data-layer="base">
@@ -601,6 +601,7 @@
             function updatePriceDisplay() {
                 const totalPrice = calculateTotalPrice();
                 priceDisplay.textContent = `Rs.${totalPrice}`;
+                addCustomButton.disabled = totalPrice === 0;
             }
 
             function updateSelectionsList() {
