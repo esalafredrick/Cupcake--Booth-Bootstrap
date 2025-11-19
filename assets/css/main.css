@@ -1347,6 +1347,21 @@ input[type="number"]:focus {
   background-color: #f30086ce;
 }
 
+.btn-get-started-signup-v1{
+  color: #000000;
+  border: solid black 2px;
+  border-radius: 25px;
+  padding: 3px 8px 3px 8px;
+  transition: ease-in-out 0.3s;
+  font-size: 13px;
+  font-weight: bold;
+}
+.btn-get-started-signup-v1:hover{
+  color: white;
+  background-color: #f30086ce;
+}
+
+
 .cart-icon-des{
   color: #000000;
   transition: ease-in-out 0.3s;
