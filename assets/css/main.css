@@ -648,6 +648,29 @@ section.events-menu-open {
   z-index: 4;
 }
 
+#custom-cupcake-prompt {
+  background: linear-gradient(to right, #F30086 0%, #FF7EE7 33%, #221aef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-top: 50px;
+}
+
+#custom-cupcake-prompt-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#custom-cupcake-prompt-img {
+  margin-left: 400px;
+  width: 250px;
+  height: auto;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
 @media (max-width: 767px) {
   
   #custom-cupcake-prompt {

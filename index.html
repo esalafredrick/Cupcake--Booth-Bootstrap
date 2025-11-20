@@ -282,7 +282,10 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-lg-6 cupcake-builder-col">
                         <div id="cupcake-builder" class="cupcake-builder">
-                            <h2 id="custom-cupcake-prompt" class="text-center text-muted">Make your custom cupcake</h2>
+                            <div id="custom-cupcake-prompt-container">
+                                <h2 id="custom-cupcake-prompt" class="text-center text-muted">Make your custom cupcake</h2>
+                                <img src="assets/img/main cupcake 2.webp" alt="cupcake suggestion" id="custom-cupcake-prompt-img">
+                            </div>
                             <img id="cupcake-base" src="" alt="Cupcake Base" style="display:none;">
                             <img id="cupcake-topping" src="" alt="Cupcake Topping" style="display:none;">
                             <img id="strawberry-half-1" src="" alt="Strawberry Half 1" style="display:none;">
@@ -556,7 +559,7 @@
             const priceDisplay = document.getElementById('custom-cupcake-price');
             const selectionsList = document.getElementById('custom-selections-list');
             const creationHeading = document.getElementById('your-creation-heading');
-            const cupcakePrompt = document.getElementById('custom-cupcake-prompt');
+            const cupcakePromptContainer = document.getElementById('custom-cupcake-prompt-container');
 
             const prices = {
                 base: 200,
@@ -659,7 +662,7 @@
                 const allOptionsRemoved = Object.values(selectedOptions).every(option => option === null);
                 if (allOptionsRemoved) {
                     creationHeading.style.display = 'none';
-                    cupcakePrompt.style.display = 'block';
+                    cupcakePromptContainer.style.display = 'inline-flex';
                 }
             }
 
@@ -675,10 +678,10 @@
                 const allOptionsRemoved = Object.values(selectedOptions).every(option => option === null);
                 if (allOptionsRemoved) {
                     creationHeading.style.display = 'none';
-                    cupcakePrompt.style.display = 'block';
+                    cupcakePromptContainer.style.display = 'inline-flex';
                 } else {
                     creationHeading.style.display = 'block';
-                    cupcakePrompt.style.display = 'none';
+                    cupcakePromptContainer.style.display = 'none';
                     if (selectedOptions.base) {
                         imageElements.base.src = selectedOptions.base.src;
                         imageElements.base.style.display = 'block';
@@ -728,7 +731,7 @@
                     creationHeading.style.display = 'block';
 
                     // Hide the initial prompt message
-                    cupcakePrompt.style.display = 'none';
+                    cupcakePromptContainer.style.display = 'none';
 
                     // --- Pricing and State Update Logic ---
                     let effectiveLayer = layer;
