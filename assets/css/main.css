@@ -728,6 +728,10 @@ section.events-menu-open {
   #events .cupcake-builder-col {
     margin-top: 20px !important;
   }
+
+  .custom-selections-col {
+    width: 100%;
+  }
 }
 
 /* Custom Selections List */
